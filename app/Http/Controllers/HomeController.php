@@ -25,4 +25,25 @@ class HomeController extends Controller
     {
         return view('home');
     }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function myHome()
+    {
+        return view('myHome');
+    }
+
+    /**
+     * Show the my users page.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function myUsers()
+    {
+        return view('myUsers');
+    }
 }
