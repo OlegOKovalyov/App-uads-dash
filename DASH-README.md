@@ -41,12 +41,18 @@ $ php artisan make:model Uadsusers -m
 Model created successfully.
 Created Migration: 2018_08_30_084012_create_uadsusers_table
 
+$ php artisan make:model Uadsuser -m
+
+Model created successfully.
+Created Migration: 2018_08_30_110816_create_uadsusers_table
+
+
 It will create two files:
 - /app/Uadsusers.php model
 - /database/migrations/create_uadsusers_table migration file.
 
 5. We need to create Schema for the passports table. So navigate to 
-Laravel  >>  database  >>  migrations  >>  create_passports_table.
+/database/migrations/create_passports_table.
 
 // create_passports_table:
  public function up()
@@ -64,23 +70,30 @@ Laravel  >>  database  >>  migrations  >>  create_passports_table.
     }
 
 // create_uadsusers_table:
-        Schema::create('passports', function (Blueprint $table) {
+        Schema::create('uadsusers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('login')->unique();
             $table->string('name');
             // $table->integer('date');
             $table->string('email')->unique();
-            $passpword->string('password');
-            $role->string('role');
+            $table->string('password');
+            $table->string('role');
             // $table->integer('number');
             // $table->string('office');
             // $table->string('filename');
             $table->timestamps();
-        });    
+        });   
 
 6. Now, migrate the table by the following command:
 
 $ php artisan migrate
+
+Migrating: 2018_08_30_084012_create_uadsusers_table
+Migrated:  2018_08_30_084012_create_uadsusers_table
+
+Migrating: 2018_08_30_110816_create_uadsusers_table
+Migrated:  2018_08_30_110816_create_uadsusers_table
+
 
 7. Build view file to add the Information in the database: /resources/views/create.blade.php
 
@@ -93,10 +106,22 @@ $ php artisan make:controller PassportController --resource
 It will create one controller file called /app/Http/Controllers/PassportController.php and 
 It has all the CRUD Functions, we need to inquire.
 
+$ php artisan make:controller UadsusersController --resource
+
+Controller created successfully.
+
+$ php artisan make:controller UadsuserController --resource
+
+Controller created successfully.
+
 9. We register one route in /routes/web.php file:
 
 // web.php
 Route::resource('passports','PassportController');
+
+Route::resource('uadsusers','UadsusersController');
+
+Route::resource('uadsusers','UadsuserController');
 
 Чтобы получить список всех маршрутов нашего роутера можно вызвать команду:
 

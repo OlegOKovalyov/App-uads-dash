@@ -13,7 +13,7 @@
                 <!-- /input-group -->
             </li>
             <li>
-                <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                <a href="/my-home"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
             </li>
             <li>
                 <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
@@ -28,7 +28,7 @@
                 <!-- /.nav-second-level -->
             </li>
             <li>
-                <a href="/my-users/"><i class="fa fa-table fa-fw"></i> Users</a>
+                <a href="/my-users"><i class="fa fa-table fa-fw"></i> Users</a>
             </li>
             <li>
                 <a href="forms.html"><i class="fa fa-edit fa-fw"></i> Forms</a>

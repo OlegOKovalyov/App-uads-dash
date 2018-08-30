@@ -13,22 +13,13 @@ class CreateUadsusersTable extends Migration
      */
     public function up()
     {
-        /*Schema::create('uadsusers', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
-        });*/
-
-        Schema::create('passports', function (Blueprint $table) {
+        Schema::create('uadsusers', function (Blueprint $table) {
             $table->increments('id');
             $table->string('login')->unique();
             $table->string('name');
-            // $table->integer('date');
             $table->string('email')->unique();
             $table->string('password');
             $table->string('role');
-            // $table->integer('number');
-            // $table->string('office');
-            // $table->string('filename');
             $table->timestamps();
         });
     }
