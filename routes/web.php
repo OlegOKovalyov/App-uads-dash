@@ -25,8 +25,9 @@ Route::get('/my-home', 'HomeController@myHome');
 
 Route::get('/my-users', 'HomeController@myUsers');
 
+
 //Route::resource('uadsusers','UadsusersController'); // Not working
 
 Route::resource('/my-users','UadsuserController'); // Not working
 
-Route::resource('/uadsusers','UadsuserController');
+//Route::resource('/my-edit','UadsuserController');

@@ -54,6 +54,12 @@
                 </ul>
                 <!-- /.nav-second-level -->
             </li>
+            <li>
+                <a href="{{ route('logout') }}" 
+                    onclick="event.preventDefault(); 
+                                                    document.getElementById('logout-form').submit();">
+                <i class="fa fa-sign-out fa-fw"></i> {{ __('Logout') }}</a>
+            </li>            
         </ul>
     </div>
     <!-- /.sidebar-collapse -->

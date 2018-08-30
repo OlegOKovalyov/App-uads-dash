@@ -58,7 +58,8 @@ class UadsuserController extends Controller
      */
     public function edit($id)
     {
-        //
+        $uadsusers = \App\Uadsuser::find($id);
+        return view('myedit',compact('uadsusers','id'));
     }
 
     /**
@@ -70,7 +71,14 @@ class UadsuserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $passport= \App\Uadsuser::find($id);
+        $passport->login=$request->get('login');
+        $passport->name=$request->get('name');
+        $passport->email=$request->get('email');
+        $passport->password=$request->get('password');
+        $passport->role=$request->get('role');
+        $passport->save();
+        return redirect('my-users');
     }
 
     /**
