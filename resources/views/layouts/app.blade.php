@@ -65,6 +65,10 @@
                                     </form>
                                 </div>
                             </li>
+                            <div class="top-right links" style="display: flex;margin-top: 10px;">
+                                <a href="{{ url('/my-home') }}" style="color: #636b6f;padding: 0 25px;font-size: 12px;font-weight: 600;letter-spacing: .1rem;text-decoration: none;text-transform: uppercase;">My Home</a>
+                                <a href="{{ url('/my-users') }}" style="color: #636b6f;padding: 0 25px;font-size: 12px;font-weight: 600;letter-spacing: .1rem;text-decoration: none;text-transform: uppercase;">My Users</a>
+                            </div>                            
                         @endguest
                     </ul>
                 </div>

@@ -71,13 +71,13 @@ class UadsuserController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $passport= \App\Uadsuser::find($id);
-        $passport->login=$request->get('login');
-        $passport->name=$request->get('name');
-        $passport->email=$request->get('email');
-        $passport->password=$request->get('password');
-        $passport->role=$request->get('role');
-        $passport->save();
+        $uadsusers = \App\Uadsuser::find($id);
+        $uadsusers->login=$request->get('login');
+        $uadsusers->name=$request->get('name');
+        $uadsusers->email=$request->get('email');
+        $uadsusers->password=$request->get('password');
+        $uadsusers->role=$request->get('role');
+        $uadsusers->save();
         return redirect('my-users');
     }
 
@@ -89,6 +89,8 @@ class UadsuserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $uadsusers = \App\Uadsuser::find($id);
+        $uadsusers->delete();
+        return redirect('my-users')->with('success','Information has been  deleted');
     }
 }
